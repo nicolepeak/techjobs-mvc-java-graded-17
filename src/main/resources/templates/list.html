@@ -22,6 +22,16 @@
 
     <td></td> <!-- Feel free to remove or modify this element if necessary. -->
 
+    <!-- "All" column link, query param 'column=all'/ I copied the syntax from below -->
+    <td>
+      <ul>
+        <li>
+          <a th:href="@{/list/jobs(column=all)}" th:text="'All'"></a>
+        </li>
+      </ul>
+    </td>
+
+    <!-- Links for other categories -->
     <td th:each="category : ${tableChoices}">
       <ul>
         <li th:each="item : ${category.value}">
